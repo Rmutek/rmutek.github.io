@@ -67,20 +67,58 @@
     </nav>
 
     <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/chakras.jpg" alt="">
-                    <div class="intro-text">
-                        <span class="name">Rebecca Mutek</span>
-                        <hr class="star-light">
-                        <span class="skills">Web Developer - Yogi - Learner</span>
-                    </div>
-                </div>
-            </div>
+    <header class="masthead">
+      <div class="container">
+        <img class="img-fluid" src="img/profile.png" alt="">
+        <div class="intro-text">
+          <span class="name">Start Bootstrap</span>
+          <hr class="star-light">
+          <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
         </div>
+      </div>
     </header>
+      <!-- Color Thing -->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script> var w = 1260,
+    h = 250,
+    z = 20,
+    x = w / z,
+    y = h / z;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", w)
+    .attr("height", h);
+
+svg.selectAll("rect")
+    .data(d3.range(x * y))
+  .enter().append("rect")
+    .attr("transform", translate)
+    .attr("width", z)
+    .attr("height", z)
+    .style("fill", function(d) { return d3.hsl(d % x / x * 360, 1, Math.floor(d / x) / y); })
+    .on("mouseover", mouseover);
+
+function translate(d) {
+  return "translate(" + (d % x) * z + "," + Math.floor(d / x) * z + ")";
+}
+
+function mouseover(d) {
+  this.parentNode.appendChild(this);
+
+  d3.select(this)
+      .style("pointer-events", "none")
+    .transition()
+      .duration(1550)
+      .attr("transform", "translate(480,480)scale(23)rotate(180)")
+    .transition()
+      .delay(1100)
+      .attr("transform", "translate(240,240)scale(0)")
+      .style("fill-opacity", 0)
+      .remove();
+}
+
+</script>
+
 
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
@@ -90,16 +128,18 @@
                     <h2>Projects</h2>
                     <hr class="star-primary">
                 </div>
+        
+            <div id="container"></div>
             </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="https://github.com/Rmutek" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+                        <img src="vendor/github-mark.png" class="img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
@@ -530,6 +570,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
 
 </body>
 
