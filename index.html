@@ -11,6 +11,7 @@
 
         gtag('config', 'UA-107297490-1');
     </script>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -276,6 +277,26 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
+    <script>    
+    
+    const arrayOfKeys = [];
+    const secrectCode = 'mutekrocks';
+
+    window.addEventListener('keyup', logKey);
+    
+    function logKey(e) {
+        console.log(e.key)
+        
+        arrayOfKeys.push(e.key);
+        arrayOfKeys.splice(-secrectCode.length -1, arrayOfKeys.length - secrectCode.length);
+        if(arrayOfKeys.join('').includes(secrectCode)) {
+            console.log("You are the WINNER!!!!");
+            cornify_add();
+        }
+        console.log(arrayOfKeys);
+    };
+
+</script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
