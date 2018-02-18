@@ -282,21 +282,25 @@
     const arrayOfKeys = [];
     const secrectCode = 'mutekrocks';
 
-    window.addEventListener('keyup', logKey);
-    
-    function logKey(e) {
-        console.log(e.key)
-        
+    window.addEventListener('keyup', (e) => {
+        console.log(e.key);        
         arrayOfKeys.push(e.key);
         arrayOfKeys.splice(-secrectCode.length -1, arrayOfKeys.length - secrectCode.length);
-        if(arrayOfKeys.join('').includes(secrectCode)) {
+        if (arrayOfKeys.join('').includes(secrectCode)) {
             console.log("You are the WINNER!!!!");
             cornify_add();
-        }
+        } 
         console.log(arrayOfKeys);
-    };
+    });
+    
+  
+        
+        
 
-</script>
+        
+
+
+    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
