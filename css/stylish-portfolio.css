@@ -295,7 +295,7 @@ hr.small {
         height: 75%;
     }
     .col-4 {
-        width: 100%;
+        max-width: 100% !important;
     }
 }
 
