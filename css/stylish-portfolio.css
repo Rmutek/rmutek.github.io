@@ -294,6 +294,9 @@ hr.small {
     .map {
         height: 75%;
     }
+    .col-4 {
+        width: 100%;
+    }
 }
 
 .map iframe {
