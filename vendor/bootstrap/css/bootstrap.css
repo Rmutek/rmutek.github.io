@@ -857,9 +857,9 @@ pre code {
     max-width: 25%;
   }
   .col-sm-4 {
-    -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 1000%;
   }
   .col-sm-5 {
     -ms-flex: 0 0 41.666667%;
@@ -981,9 +981,9 @@ pre code {
     max-width: 25%;
   }
   .col-md-4 {
-    -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    max-width: 100%;
   }
   .col-md-5 {
     -ms-flex: 0 0 41.666667%;
