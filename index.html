@@ -38,6 +38,7 @@
 
 <body>
     <!-- Navigation -->
+    <!-- “Today you are you, that is truer than true. There is no one alive who is you-er than you." - Dr. Seuss -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
@@ -51,9 +52,6 @@
             <li>
                 <a href="#about" onclick=$( "#menu-close").click();>About</a>
             </li>
-<!--             <li>
-                <a href="https://medium.com/@RMutek" onclick=$( "#menu-close").click();>Blog</a>
-            </li> -->
             <li>
                 <a href="#portfolio" onclick=$( "#menu-close").click();>Portfolio</a>
             </li>
@@ -186,27 +184,6 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="https://qa-back-yards-coffee.herokuapp.com/">
-                                    <img class="img-portfolio img-fluid" src="img/anete-lusina-146471.jpg">
-                                </a><h3>Project - Back of the Yards Coffee</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="https://shrouded-basin-69875.herokuapp.com/">
-                                    <img class="img-portfolio img-fluid" src="img/oysters2.jpg">
-                                </a><h3>Project - Oy'ster</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="https://medium.com/@RMutek">
-                                    <img class="img-portfolio img-fluid" src="img/andrew-neel-308138.jpg">
-                                </a><h3>Blog</h3>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
                                 <a href="/resume.html">
                                     <img class="img-portfolio img-fluid" src="img/portfolio-4.jpg">
                                 </a><h3>Resume</h3>
@@ -261,15 +238,9 @@
                         <li class="list-inline-item">
                             <a href="https://www.linkedin.com/in/rebecca-mutek/"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
                         </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com/beelee__/?hl=en"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
-                        </li>
-<!--                         <li class="list-inline-item">
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li> -->
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; My Website 2017</p>
+                    <p class="text-muted">Copyright &copy; My Website 2021</p>
                 </div>
             </div>
         </div>
@@ -289,8 +260,7 @@
         if (arrayOfKeys.join('').includes(secrectCode)) {
             console.log("You are the WINNER!!!!");
             cornify_add();
-        } 
-        console.log(arrayOfKeys);
+        }
     });
 
     </script>
